@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".wificonter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        tools:context=".wificonter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp">
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:id="@+id/host_editText"
+            android:hint="服务器地址"
+            android:selectAllOnFocus="true"
+            android:inputType="phone"/>
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:id="@+id/port_editText"
+            android:hint="端口"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/connect_button"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="连接" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/show_cam"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#333"
+        android:scaleType="center"
+        android:layout_marginBottom="4dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <TextView
+            android:id="@+id/rec_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="接收消息" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/send_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:hint="发送消息" />
+    <Button
+        android:text="发送"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/send" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/upbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.146"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/downbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↓"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fire"
+            app:layout_constraintVertical_bias="0.901"
+            tools:layout_editor_absoluteX="161dp" />
+
+        <Button
+            android:id="@+id/liftbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upbutton"
+            app:layout_constraintVertical_bias="0.142" />
+
+        <Button
+            android:id="@+id/rigthbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="→"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.826"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upbutton"
+            app:layout_constraintVertical_bias="0.18" />
+
+        <Button
+            android:id="@+id/fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开火"
+            app:layout_constraintBottom_toTopOf="@+id/downbutton"
+            app:layout_constraintEnd_toStartOf="@+id/rigthbutton"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toEndOf="@+id/liftbutton"
+            app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
